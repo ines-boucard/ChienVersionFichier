@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Gestion des Chiens{% endblock %}
+
+{% block body %}
+    <h1>Bienvenue sur la gestion des photos de chiens <i class="fas fa-dog"></i>:)</h1>
+    {% for d in dossiers %}
+        <a href="{{ path("voirDossier", {"dossier":d.filename}) }}">
+            {{ d.filename }}
+        </a>
+        <br>
+    {% endfor %}
+{% endblock %}

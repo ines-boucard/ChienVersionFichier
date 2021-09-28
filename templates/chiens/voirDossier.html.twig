@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Les chiens du dossier {{ dossier }}
+{% endblock %}
+
+{% block body %}
+    <h1>Les chiens du dossier <i>{{ dossier }}</i></h1>
+
+    <div class="row">
+        {% for chiens in photos %}
+          {% include "chiens/_chien.html.twig" %}
+        {% endfor %}
+
+    </div>
+{% endblock %}
