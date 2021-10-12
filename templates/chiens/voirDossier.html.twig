@@ -11,6 +11,8 @@
         {% for chiens in photos %}
           {% include "chiens/_chien.html.twig" %}
         {% endfor %}
-
     </div>
+
+    <h2>Ajouter une photo</h2>
+    {{ form(formPhoto) }}
 {% endblock %}
